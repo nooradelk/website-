@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins' , sans-serif;
+}
+
+body{
+  min-height: 100vh;
+
+  background: #000;
+}
+
+.bg{
+  position: absolute;
+  width: 1000%;
+  height: 2000%;
+  overflow: hidden;
+  top: 10px;
+
+}
+.bubbles{
+  position: relative;
+  display: flex;
+}
+.bubbles span{
+  position: relative;
+  min-width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  margin: 0 4px;
+  animation: animate  15s linear infinite;
+  animation-duration: calc(75s / var(--i));
+   
+}
+.bubbles   span:nth-child(even)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d75, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+@keyframes animate{
+
+    0%{
+        transform: translateY(100vh) scale(0);
+    }
+
+
+
+    100%{
+
+        transform: translateY(-10vh) scale(1);
+    }
+}.box{
+    width: 300px;
+    height: 400px;
+    justify-content: center;
+    background-color: antiquewhite;
+    position: relative;
+    margin-left: 200px;
+    margin-top: 120px;
+    right: -250px;
+    display: flex;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+  
+  }
+  form{
+    position: absolute;
+    inset: 2px;
+    border-radius: 50px 5px;
+
+    z-index: 10;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  h2{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .inputbox{
+    position: relative;
+    width: 200px;
+    margin-top: 35px;
+  }
+  .inputbox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+  
+  }
+  input[type=" submit"]{
+    font-size:20px;
+    border: none;
+  outline: none;
+  background: #45f3ff;
+  padding: 5px;
+  margin-top: 40px;
+  border-radius: 90px;
+  font-weight: 600;
+  cursor: pointer;
+  }
+  input[type="submit"]:active{
+    background: linear-gradient(90deg,#45f3ff,#d9138a);
+    opacity: 0.8;
+  
+  }
+  .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0,05em;
+    transition: 0.5s;
+  }
+  .inputbox input:valid~span,
+  .inputbox input:focus~span
+  {
+    color: #45f3ff;
+    transform: translateX(-10px) translateY(-30px);
+    font-size: 0.75em;
+  }
+  .inputbox i{
+    position: absolute;
+   left: 0;
+    bottom: 0;
+  width:100%;
+  height:2px;
+  background: #fff;
+  border-bottom: 1px solid ;
+  background: transparent;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+  
+  }
+  .inputbox input:valid ~ i,
+  .inputbox input:focus ~ i
+  {
+    height: 44px;
+  }
+  .links
+{
+  display: flex;
+  justify-content: space-between;
+
+}
+.links a{
+  margin: 25px 0;
+  font-size: 1em;
+  color : #8f8f8f;
+  text-decoration: none;
+
+} 
+.links a:hover,
+.links  a:nth-child(2){
+
+  color: #fff;
+
+}
+
+
+.links  a:nth-child(2):hover
+{
+  text-decoration: underline 2px;
+  text-underline-offset: 5px;
+  transform: scale(1s);
+
+}
+
+
+
+
+
+
+
+
+
+
+   
